@@ -1,0 +1,52 @@
+/*creates an array of 5 elements, takes input from the user, and performs the following functions:
+
+Find the maximum and minimum value in the array
+Print the sum of all the elements in the array
+Find the number of prime numbers in the array
+Print the factorial of each element in the array
+Print the length of the array */
+import java.util.Scanner;
+
+public class ArrayOperations {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    int[] arr = new int[5];
+    int max = 0, min = Integer.MAX_VALUE, sum = 0, primeCount = 0, factorial;
+
+    System.out.println("Enter 5 elements in the array: ");
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = input.nextInt();
+      sum += arr[i];
+
+      if (arr[i] > max) {
+        max = arr[i];
+      }
+      if (arr[i] < min) {
+        min = arr[i];
+      }
+
+      boolean isPrime = true;
+      for (int j = 2; j < arr[i]; j++) {
+        if (arr[i] % j == 0) {
+          isPrime = false;
+          break;
+        }
+      }
+      if (isPrime) {
+        primeCount++;
+      }
+
+      factorial = 1;
+      for (int j = 1; j <= arr[i]; j++) {
+        factorial *= j;
+      }
+      System.out.println("Factorial of " + arr[i] + " is: " + factorial);
+    }
+
+    System.out.println("Maximum value in the array is: " + max);
+    System.out.println("Minimum value in the array is: " + min);
+    System.out.println("Sum of all elements in the array is: " + sum);
+    System.out.println("Number of prime numbers in the array is: " + primeCount);
+    System.out.println("Length of the array is: " + arr.length);
+  }
+}
