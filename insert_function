@@ -1,0 +1,12 @@
+//USING INSERT FUNCTION IN STRING BUFFER
+Main.java
+class A {
+public static void main(String args[])
+{
+StringBuffer sb = new StringBuffer("Hello ");
+System.out.println("Aman kumar prasad 22csu266");
+sb.insert(1, "Java");
+// Now original string is changed
+System.out.println(sb);
+}
+}
