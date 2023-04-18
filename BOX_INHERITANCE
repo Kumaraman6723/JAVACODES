@@ -1,0 +1,118 @@
+/*Program Statement
+     Define a class Box with the following instance variables: width, height and depth, all of type float. Create a new class BoxWeigth that extends Box to include weight as an instance variable. Write an application that tests the functionalities of both these classes.
+Definition of Done:
+DoD 1: Three java files to be defined. One for each class definition: Box, BoxWeight and BoxWeightDemo.
+DoD 2:  Box and BoxWeight should have three types of constructors defined: clone of an object, all dimensions specified as arguments, no argument.
+DoD 3: Super is used to call base class constructors in derived class
+DoD 4: Get and set functions defined as applicable in Box and BoxWeight classes.
+DoD 5: Function to display volume in Box class and weight in BoxWeigth class*/
+class Box {
+    private float width;
+    private float height;
+    private float depth;
+
+    public Box() {
+        this.width = 0;
+        this.height = 0;
+        this.depth = 0;
+    }
+
+    public Box(float width, float height, float depth) {
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
+    }
+
+    public Box(Box box) {
+        this.width = box.width;
+        this.height = box.height;
+        this.depth = box.depth;
+    }
+
+    public float getWidth() {
+        return this.width;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public float getHeight() {
+        return this.height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public float getDepth() {
+        return this.depth;
+    }
+
+    public void setDepth(float depth) {
+        this.depth = depth;
+    }
+
+    public float getVolume() {
+        return this.width * this.height * this.depth;
+    }
+
+    public void displayVolume() {
+        System.out.println("Volume: " + this.getVolume());
+    }
+}
+class BoxWeight extends Box {
+    private float weight;
+
+    public BoxWeight() {
+        super();
+        this.weight = 0;
+    }
+
+    public BoxWeight(float width, float height, float depth, float weight) {
+        super(width, height, depth);
+        this.weight = weight;
+    }
+
+    public BoxWeight(BoxWeight boxWeight) {
+        super(boxWeight);
+        this.weight = boxWeight.weight;
+    }
+
+    public float getWeight() {
+        return this.weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public void displayWeight() {
+        System.out.println("Weight: " + this.weight);
+    }
+}
+public class BoxWeightDemo {
+    public static void main(String[] args) {
+        Box box1 = new Box(2, 3, 4);
+        box1.displayVolume();
+
+        Box box2 = new Box(box1);
+        box2.setHeight(5);
+        box2.displayVolume();
+
+        BoxWeight boxWeight1 = new BoxWeight(2, 3, 4, 1.5f);
+        boxWeight1.displayVolume();
+        boxWeight1.displayWeight();
+
+        BoxWeight boxWeight2 = new BoxWeight(boxWeight1);
+        boxWeight2.setWidth(3);
+        boxWeight2.setHeight(4);
+        boxWeight2.setDepth(5);
+        boxWeight2.setWeight(2);
+        boxWeight2.displayVolume();
+        boxWeight2.displayWeight();
+    }
+}
+
+
+
