@@ -1,0 +1,10 @@
+//USING REVERSE FUNCTION IN STRING BUFFER
+import java.io.*;
+class A {
+public static void main(String args[])
+{
+StringBuffer sb = new StringBuffer("Hello");
+sb.reverse();
+System.out.println(sb);
+}
+}
