@@ -1,0 +1,63 @@
+//PROGRAM TO CALCULATE TAX,GROSS SALARY AND SAVINGS
+import java.util.Scanner;
+
+public class Customer {
+    String name;
+    int id;
+    double grossSalary;
+    double totalSavings;
+
+    public Customer(String name, int id, double grossSalary, double totalSavings) {
+        this.name = name;
+        this.id = id;
+        this.grossSalary = grossSalary;
+        this.totalSavings = totalSavings;
+    }
+
+    public Customer(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public double taxCalculator() {
+        double taxableIncome = this.grossSalary - this.totalSavings;
+        double tax = 0;
+
+        if (taxableIncome > 0 && taxableIncome <= 100000) {
+            tax = 0;
+        } else if (taxableIncome > 100000 && taxableIncome <= 200000) {
+            tax = 0.1 * (taxableIncome - 100000);
+        } else if (taxableIncome > 200000 && taxableIncome <= 500000) {
+            tax = (0.1 * 100000) + (0.2 * (taxableIncome - 200000));
+        } else if (taxableIncome > 500000) {
+            tax = (0.1 * 100000) + (0.2 * 200000) + (0.3 * (taxableIncome - 500000));
+        }
+
+        return tax;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your ID: ");
+        int id = scanner.nextInt();
+
+        System.out.print("Enter your gross salary: ");
+        double grossSalary = scanner.nextDouble();
+
+        System.out.print("Enter your total savings: ");
+        double totalSavings = scanner.nextDouble();
+
+        Customer customer = new Customer(name, id, grossSalary, totalSavings);
+        double tax = customer.taxCalculator();
+
+        System.out.println("Name: " + customer.name);
+        System.out.println("ID: " + customer.id);
+        System.out.println("Gross Salary: " + customer.grossSalary);
+        System.out.println("Total Savings: " + customer.totalSavings);
+        System.out.println("Tax: " + tax);
+    }
+}
