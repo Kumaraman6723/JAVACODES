@@ -1,0 +1,12 @@
+//CHARACTERS AND ASCII CODES 
+public class Helloworld {
+public static void main(String[] args) {
+char myGrade='B':
+System.out.println("SINGLE CHAR "+myGrade);
+char myVar1 = 65, myVar2 66, myVar3 = 67 ;
+System.out.println("CHAR USING ASCII VALUE "myVar1);
+System.out.println(myVar2);
+System.out.println(myVar3);
+String greeting = "Hello World":
+System.out.println("STRING"+greeting);
+}}
