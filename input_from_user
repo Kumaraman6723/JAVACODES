@@ -1,0 +1,12 @@
+//TAKING INPUT FROM THE USER
+import java.util.*;
+class HelloWorld {
+public static void main(String[] args) {
+Scanner sc- new Scanner(System.in); //System. in is a standard input stream
+System.out.println("Enter first number"); 7 int a =sc.nextInt();
+System.out.println("Enter second number"); int b-sc.nextInt();
+System.out.println("Enter third number");
+int csc.nextInt();
+int d=a+b+c;
+System.out.println("total ="+d):
+}}
