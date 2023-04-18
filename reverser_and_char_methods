@@ -1,0 +1,17 @@
+//REVERSE AND CHARAT METHOD IN STRING BUFFER
+import java.util.*;
+class Main
+public static void main(String[] args) {
+String str="" reverseStr = "";
+Scanner sc-new Scanner(System.in);
+str-sc.nextLine();
+int strLengthstr.length();
+for (int i= (strLength 1); i >-0; -1) {
+reverseStr = reverseStr str.charAt(i);
+}
+if (str.toLowerCase().equals(reverseStr.toLowerCase())) { System.out.println("YES");
+}
+else {
+System.out.println("NO");
+}
+}}
