@@ -1,0 +1,11 @@
+//accessing elements of the array
+public class main
+public static void main(String[] args)
+int[] age={12,4,5,2,5);
+System.out.println("accessing elements of the array");
+System.out.println("first element of the array is "+ age[0]);
+System.out.println("second element of the array is "+ age[1]);
+System.out.println("third element of the array is" + age[2]);
+System.out.println("fourth element of the array is"+ age [3]);
+System.out.println("fifth element of the array is "+ age[4]):
+}
