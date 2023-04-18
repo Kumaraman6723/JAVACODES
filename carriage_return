@@ -1,0 +1,8 @@
+class Helloworld {
+public static void main(String[] args) { System.out.print("Hello, World!"); 5- 6
+System.out.print("\n my name is aman kumar prasad and my roll no
+22csu266 \n");
+System.out.print("\t i study in northcap university");
+System.out.println("Hello\rworld ");
+System.out.println("I will\n print of their different line ");
+}}
