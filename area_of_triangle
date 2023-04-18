@@ -1,0 +1,38 @@
+//PROGRAM TO CALCULATE AREA OF THE TRIANGLE
+import java.lang.*;
+import java.math.*;
+
+
+public class Triangle {
+     int a, b, c;
+     double area;
+    Triangle(){
+        this.a=0;
+        this.b=0;
+        this.c=0;
+
+    }
+    public void takeValues(int a,int b,int c)
+    {
+        this.a=a;
+        this.b=b;
+        this.c=c;
+    }
+
+    public double area() {
+        int s = (a + b + c) / 2;
+         area = Math.sqrt(s * (s-a) * (s-b) * (s-c));
+        return area;
+    }
+}
+class GFG
+{
+    public static void main(String[] args) {
+        Triangle obj=new Triangle();
+        obj.takeValues(3,4,5);
+        double area;
+        area=obj.area();
+        System.out.println("the area is "+area);
+    }
+}
+
