@@ -1,0 +1,22 @@
+//to take input sides of the triangle from the user and check whether it is a equilateral triangle or not 
+import java.util.Scanner;
+public class TriangleType {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in);
+
+    System.out.print("Enter the length of the first side: ");
+    int side1 = input.nextInt();
+
+    System.out.print("Enter the length of the second side: ");
+    int side2 = input.nextInt();
+
+    System.out.print("Enter the length of the third side: ");
+    int side3 = input.nextInt();
+
+    if (side1 == side2 && side2 == side3) {
+      System.out.println("The triangle is equilateral.");
+    } else {
+      System.out.println("The triangle is not equilateral.");
+    }
+  }
+}
