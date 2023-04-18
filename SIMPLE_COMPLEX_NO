@@ -1,0 +1,68 @@
+//SIMPLE COMPLEX NUMBER PROGRAM AND PERFORMING VARIOUS FUNCTION ON THEM 
+import java.util.Scanner;
+
+public class Complex1 {
+    private int r1;
+    private int r2;
+    private int i1;
+    private int i2;
+
+    public void setReal1(int r1, int r2) {
+        this.r1 = r1;
+        this.r2 = r2;
+    }
+
+    public int getReal1() {
+        return r1;
+    }
+
+    public int getReal2() {
+        return r2;
+    }
+
+    public void setImaginary1(int i1, int i2) {
+        this.i1 = i1;
+        this.i2 = i2;
+    }
+
+    public int getImaginary1() {
+        return i1;
+    }
+
+    public int getImaginary2() {
+        return i2;
+    }
+
+    public void sum() {
+        int real = r1 + r2;
+        int imag = i1 + i2;
+        System.out.println(real + " + " + imag + "i");
+    }
+
+    public void diff() {
+        int real = r1 - r2;
+        int imag = i1 - i2;
+        System.out.println(real + " + " + imag + "i");
+    }
+
+    public void multiply() {
+        int real = r1 * r2 - i1 * i2;
+        int imag = r1 * i2 + r2 * i1;
+        System.out.println(real + " + " + imag + "i");
+    }
+
+    public static void main(String[] args) {
+        Complex1 c = new Complex1();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter real and imaginary values of frist number");
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        System.out.println("enter real and imaginary values of frist number");
+        int c1=sc.nextInt();
+        int d=sc.nextInt();
+        c.setReal1(a, c1);
+        c.setImaginary1(b,d);
+        c.sum(); // prints "5 + 9i"
+        c.diff(); // prints "-1 -1i"
+        c.multiply(); // prints "-7 + 22i"
+    }
