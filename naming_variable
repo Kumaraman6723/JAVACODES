@@ -1,0 +1,21 @@
+1- /* THE GENRNAL RULES FOR NAMING VARIABLE IN JAVA
+2 NAMES CAN CONTAIN LETTER DIGITS UNDERSCORES AND DOLLAR SIGN
+3 NAMES MUST BEGIN WITH A LETTER
+4 NAMES SHOOULD START WITH A LOWERCASE LETTER AND IT CONTAIN CONTAIN WHITESPACE
+5 NAMES CAN ALSO BEGIN WITH $ SIGN 6 NAMES ARE CASE SENSITIVE
+7 RESERVED WORDS LIKE (JAVA KEYWORDS SUCH AS INT AND BOOLEAN) CAMMOT BE AS NAMES*/
+
+class HelloWorld (
+public static void main(String[] args) {
+int x-5;
+int y-6;
+int z-50;
+System.out.println("Declaring variables individually");
+System.out.println("\n sum is "+x+y+z); //string
+System.out.println("\n sum is "+(x+y+2));// number //explicit type casting to number
+System.out.println("\n sum is "+((int)x+(int)y+(int)z));
+int b,f:
+b=f=90;
+System.out.println("Sum is "+(b+f));
+}
+}
