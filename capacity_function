@@ -1,0 +1,13 @@
+//USING CAPACITY FUNCTION IN STRING BUFFER
+import java.io.*;
+class A {
+public static void main(String args[])
+{
+System.out.println(sb.capacity()); // default 16
+System.out.println(sb.capacity()); // now 16
+sb.append("Hello");
+sb.append("java is my favourite language"); 10 11
+System.out.println(sb.capacity());
+// Now (16*2)+2=34 i.e (oldcapacity*2)+2
+}
+}
