@@ -1,0 +1,29 @@
+//PROGRAM ON ABSTRACT CLASS 
+ abstract class Shape
+{
+    public abstract void area();
+    public void display()
+    {
+        System.out.println("in abstract class shape");
+    }
+
+}
+class square extends Shape{
+    int s; int area;
+    square()
+    {
+        s=10;
+    }
+    @Override
+    public void area() {
+        area=s*s;
+        System.out.println(area);
+    }
+}
+class AbstractClassDemo1
+        {
+public static void main(String[]args){
+        square s = new square();
+        s.area();
+        }
+        }M ON ABSTRACT CLASS 
