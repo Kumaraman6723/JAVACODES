@@ -1,0 +1,32 @@
+//TO FIND AREA OF THE CIRCLE AND USE GETTER AND SETTER METHODS 
+public class Circle {
+    private double radius;
+
+    public void setRadius(double newRadius){
+        radius = newRadius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public double findarea() {
+        double area;
+        area = 3.14 * radius * radius;
+        return area;
+    }
+
+    public double displayarea() {
+
+        return findarea();
+    }
+}
+
+class Circledemo {
+    public static void main(String args[]) {
+        Circle c = new Circle();
+        c.setRadius(2.0);
+        System.out.println(c.getRadius());
+        System.out.println(c.displayarea());
+    }
+}
