@@ -1,0 +1,35 @@
+//PROGRAM TO MAKE STUDENT ARRAY AND TAKE INPUT FROM USER AND DISPLAY ROLL_NO AND NAME OF THE STUDENT 
+import java.util.Scanner;
+
+public class Student {
+    public int id;
+    public String name ;
+    Student(int id, String name)
+    {
+       this.id=id;
+       this.name=name;
+
+    }
+    public void display()
+    {
+        System.out.println("Student id is:"+id+""+name);
+
+    }
+}
+class GFG{
+    public static void main(String args[])
+    {
+        Scanner sc =new Scanner(System.in);
+        Student[] arr;
+        arr=new Student[2];
+        for(int i=0;i<2;i++)
+        {
+            int id=sc.nextInt();
+            String name=sc.nextLine();
+            arr[i]=new Student(id,name);
+        }
+        for(int i=0;i<2;i++) {
+         arr[i].display();
+        }
+        }
+    }
