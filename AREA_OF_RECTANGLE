@@ -1,0 +1,25 @@
+//PROGRAM TO CALCULATE AREA OF THE RECTANGLE BY CREATING A CLASS RECTANGLE taking the values of its length and breadth as parameters of its constructor and having a method named 'returnArea' which returns the area of the rectangle.
+import java.util.*;
+public class Area
+{
+    int height,width;
+    Area(int height,int width)
+    {
+        this.height=height;
+        this.width = width;
+    }
+
+    void returnArea()
+    {
+        System.out.println("Area of rectangle = "+height*width+"sq. units");
+    }
+    public static void main(String [] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int height = sc.nextInt();
+        int width = sc.nextInt();
+        Area obj = new Area(height,width);
+        obj.returnArea();
+    }
+
+}
