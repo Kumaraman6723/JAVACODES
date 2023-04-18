@@ -1,0 +1,72 @@
+//PROGRAM TO CALC DISTANCE BETWEEN TWO POINTS 
+public class Point {
+    double x;
+    double y;
+
+    // default constructor
+    public Point() {
+        x = 0.0;
+        y = 0.0;
+    }
+
+    // parameterized constructor
+    public Point(double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+
+
+
+    // getter methods
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    // setter methods
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    // method to calculate distance between two points
+    public static double distance(Point p1, Point p2) {
+        double xDiff = p1.getX() - p2.getX();
+        double yDiff = p1.getY() - p2.getY();
+        return Math.sqrt(xDiff * xDiff + yDiff * yDiff);
+    }
+
+
+    // method to display point coordinates with width of 7 and precision of 2
+    public void display() {
+        System.out.printf("(%7.2f, %7.2f)", x, y);
+    }
+}
+
+// Main.java file
+class Main {
+    public static void main(String[] args) {
+        // create two points
+        Point p1 = new Point(5.0, 9.0);
+        Point p2 = new Point(11.0, 12.0);
+
+        // display the points
+        System.out.print("Point 1: ");
+        p1.display();
+        System.out.print("\nPoint 2: ");
+        p2.display();
+
+        // calculate distance between two points
+        double distance = Point.distance(p1, p2);
+
+        // display the distance
+        System.out.printf("\nDistance between two points: %.2f", distance);
+    }
+}
+
