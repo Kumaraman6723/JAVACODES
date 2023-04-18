@@ -1,0 +1,9 @@
+//how boolean variables works in java 
+public class Helloworld (
+public static void main(String[] args) {
+boolean is JavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);
+System.out.println(isFishTasty);
+}
+}
