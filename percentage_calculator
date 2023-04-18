@@ -1,0 +1,24 @@
+//PROGRAM TO CALCULATE PERCENTAGE OF A STUDENT IN FIVE SUBJECTS 
+import java.util.Scanner;
+public class percentage {
+    public static  void main(String args[])
+    {
+        int eng,phy,chem,math,comp;
+        int sum=0;
+        float perc;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter marks in english");
+        eng=sc.nextInt();
+        System.out.println("enter marks in physics");
+        phy=sc.nextInt();
+        System.out.println("enter marks in chemistry");
+        chem=sc.nextInt();
+        System.out.println("enter marks in math");
+        math=sc.nextInt();
+        System.out.println("enter marks in computer");
+        comp=sc.nextInt();
+        sum=eng+math+comp+phy+chem;
+        perc=((float)sum/500)*100;
+        System.out.println("the percentage is "+ perc +"%");
+    }
+}
