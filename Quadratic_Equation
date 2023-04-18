@@ -1,0 +1,27 @@
+PROGRAM TO SOLVE Quadratic Equation
+import java.util.Scanner;
+public class QuadraticEquation {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter coefficient a: ");
+    double a = sc.nextDouble();
+    System.out.print("Enter coefficient b: ");
+    double b = sc.nextDouble();
+    System.out.print("Enter coefficient c: ");
+    double c = sc.nextDouble();
+    double root1, root2;
+    double determinant = b * b - 4 * a * c;
+    if(determinant > 0) {
+      root1 = (-b + Math.sqrt(determinant)) / (2 * a);
+      root2 = (-b - Math.sqrt(determinant)) / (2 * a);
+      System.out.println("Roots are real and different.");
+      System.out.println("Root 1 = " + root1);
+      System.out.println("Root 2 = " + root2);
+    }
+    else if(determinant == 0) {
+      root1 = root2 = -b / (2 * a);
+      System.out.println("Roots are real and same.");
+      System.out.println("Root = " + root1);
+    }
+    else {  System.out.println("Roots are complex.");
+    } }}
