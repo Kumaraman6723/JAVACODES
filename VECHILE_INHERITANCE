@@ -1,0 +1,55 @@
+//Create three classes:
+Class Vehicle:
+Vehicle Class will contain a display() function, which will say "This is a Vehicle".
+ Class Car:
+Car Class will derive the Vehicle Class and overwrite its display() function. it will say "This is a Car".
+Class Bike:
+Bike Class will derive the Vehicle Class and overwrite its display() function. it will say "This is a Bike".
+ 
+Write an application that reads an Integer N, which will denote the number of tyres in the vehicle. You have to create an object of the appropriate class according to the value of N and use it display() function.
+If N = 2, Create a Bike Object.
+If N = 4, Create a Car Object.
+import java.util.Scanner;
+
+public class Vehicle {
+    void display()
+    {
+        System.out.println("This is a Vehicle");
+    }
+}
+class Car extends Vehicle{
+    void display()
+    {
+        System.out.println("This is a Car");
+    }
+}
+class Bike extends Vehicle{
+    void display()
+    {
+        System.out.println("This is a Bike");
+    }
+}
+class AA
+{
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int N;
+        System.out.println("enter the number of tyres ");
+        N=sc.nextInt();
+        switch(N)
+        {
+            case 2 :
+                Bike obj =new Bike();
+                obj.display();
+                break;
+            case 4:
+                Car obj1 =new Car();
+                obj1.display();
+                break;
+            default:
+            {
+                System.out.println("invalid choice");
+                break;
+        }
+    }
+}}
