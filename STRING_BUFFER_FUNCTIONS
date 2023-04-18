@@ -1,0 +1,330 @@
+//ALL STRING BUFFER FUNCTION IN ONE PROGRAM
+import java.io.UnsupportedEncodingException;
+public class StringDemo {
+public static void main(String args[]) {
+String string1 = "saw I was ";
+System.out.println("Dot " + string1 + "Tod");
+char[] helloArray = { 'h', '1', 'c', 'l', 'o', '.'};
+String helloString = new String(helloArray);
+System.out.println( helloString );
+String txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+System.out.println("The length of the txt string is: " + txt.length());//using length function
+String txt1 = "Hello World";//using uppercase and lower case function 
+System.out.println(txt1.toUpperCase());   
+System.out.println(txt1.toLowerCase()); 
+String txt2 = "Please locate where 'locate' occurs!";//using index of function 
+System.out.println(txt2.indexOf("L"));
+String fs;float floatVar=9;int intVar=11;String stringVar="aman";//using string format function
+fs = String.format("The value of the float variable is " +"%f, while the value of the integer " +"variable is %d, and the string " +"is %s", floatVar, intVar, stringVar);
+System.out.println(fs);
+String firstName = "John ";//using concat function
+String lastName = "Doe";
+System.out.println(firstName.concat(lastName));
+String s = "Strings are immutable";
+char result = s.charAt(8);
+System.out.println(result);
+String str1 = "Strings are immutable";//compares this String to another Object.
+String str2 = new String("Strings are immutable");
+String str3 = new String("Integers are not immutable");
+int kresult = str1.compareTo( str2 );//This method compares two strings lexicographically.
+System.out.println(kresult);
+kresult = str2.compareTo( str3 );
+System.out.println(kresult);
+int rresult = str1.compareTo( str2 );
+System.out.println(rresult);
+rresult = str2.compareTo( str3 );
+System.out.println(rresult);
+rresult = str3.compareTo( str1 );
+System.out.println(rresult);
+int fresult = str1.compareToIgnoreCase( str2 );//This method compares two strings lexicographically, ignoring case differences.
+System.out.println(fresult);
+fresult = str2.compareToIgnoreCase( str3 );
+System.out.println(fresult);
+fresult = str3.compareToIgnoreCase( str1 );
+System.out.println(fresult);
+ boolean  mresult = str1.contentEquals( str3 );//This method returns true if and only if this String represents the same sequence of characters as specified in StringBuffer.
+System.out.println(mresult);
+mresult = str2.contentEquals( str3 );
+System.out.println(mresult);
+char[] Str1 = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};//This method returns a String that represents the character sequence in the array specified.
+String Str2 = "";
+Str2 = Str2.copyValueOf( Str1 );
+System.out.println("Returned String: " + Str2);
+char[] Str5 = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};//This returns a String that represents the character sequence in the array specified.
+String Str6 = "";
+Str2 = Str6.copyValueOf( Str5, 2, 6 );
+String Str = new String("This is really not immutable!!");
+boolean retVal;//This method tests if this string ends with the specified suffix.
+retVal = Str.endsWith( "immutable!!" );
+System.out.println("Returned Value = " + retVal );
+retVal = Str.endsWith( "immu" );
+System.out.println("Returned Value = " + retVal );
+String Str11 = new String("This is really not immutable!!");/*This method compares this string to the specified object. 
+The result is true if and only if the argument is not null and is a String object that represents the same sequence of characters as this object.*/
+String Str22 = Str11;
+String Str33 = new String("This is really not immutable!!");
+retVal = Str11.equals( Str22 );
+System.out.println("Returned Value = " + retVal );
+retVal = Str11.equals( Str33 );
+System.out.println("Returned Value = " + retVal );
+String Str12 = new String("This is really not immutable!!");/*This method compares this String to another String, ignoring case considerations. 
+Two strings are considered equal ignoring case, if they are of the same length, and corresponding characters in the two strings are equal ignoring case.*/
+String Str21 = Str12;
+String Str31 = new String("This is really not immutable!!");
+String Str41= new String("This IS REALLY NOT IMMUTABLE!!");
+retVal = Str12.equals( Str21 );
+System.out.println("Returned Value = " + retVal );
+retVal = Str12.equals( Str31 );
+System.out.println("Returned Value = " + retVal );
+retVal = Str12.equalsIgnoreCase( Str41 );
+System.out.println("Returned Value = " + retVal );
+String Str01 = new String("Welcome to Tutorialspoint.com");//This method encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array.
+      try {
+         String Str02 = new String( Str01.getBytes( "UTF-8" ));
+         System.out.println("Returned Value " + Str02 );
+         Str02 = new String (Str01.getBytes( "ISO-8859-1" ));
+         System.out.println("Returned Value " + Str02 );
+      } catch ( UnsupportedEncodingException e) {
+         System.out.println("Unsupported character set");
+}
+ String St = new String("Welcome to Tutorialspoint.com");
+// This method encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array.
+try {
+     Str2 = new String(St.getBytes("UTF-8"));
+    System.out.println("Returned Value " + Str2);
+    Str2 = new String(St.getBytes("ISO-8859-1"));
+    System.out.println("Returned Value " + Str2);
+} catch (UnsupportedEncodingException e) {
+    System.out.println("Unsupported character set");
+}
+
+//This method copies characters from this string into the destination character array.
+ String Str17 = new String("Welcome to Tutorialspoint.com");
+char[] Str3 = new char[7];
+try {
+         Str17.getChars(2, 9, Str3, 0);
+         System.out.print("Copied Value = " );
+         System.out.println(Str3);
+      } catch ( Exception ex) {
+         System.out.println("Raised exception...");
+      }
+/*This method returns a hash code for this string. The hash code for a String object is computed as −
+s[0]*31^(n - 1) + s[1]*31^(n - 2) + ... + s[n - 1]*/
+ Str = new String("Welcome to Tutorialspoint.com");
+System.out.println("Hashcode for Str :" + Str.hashCode() );
+//This method returns the index within this string of the first occurrence of the specified character or -1, if the character does not occur.
+Str = new String("Welcome to Tutorialspoint.com");
+System.out.print("Found Index :" );
+System.out.println(Str.indexOf( 'o' ));
+/*This method returns the index within this string of the first occurrence of the specified character, 
+starting the search at the specified index or -1, if the character does not occur*/
+ Str = new String("Welcome to Tutorialspoint.com");
+System.out.print("Found Index :" );
+System.out.println(Str.indexOf( 'o', 5 ));
+//This method returns the index within this string of the first occurrence of the specified substring. If it does not occur as a substring, -1 is returned.
+ Str = new String("Welcome to Tutorialspoint.com");
+String SubStr1 = new String("Tutorials");
+System.out.println("Found Index :" + Str.indexOf( SubStr1 ));
+/*This method returns a canonical representation for the string object.
+ It follows that for any two strings s and t, s.intern() == t.intern() is true if and only if s.equals(t) is true.*/
+ String Str16 = new String("Welcome to Tutorialspoint.com");
+  String Str26 = new String("WELCOME TO SUTORIALSPOINT.COM");
+
+      System.out.print("Canonical representation:" );
+      System.out.println(Str16.intern());
+
+      System.out.print("Canonical representation:" );
+      System.out.println(Str26.intern());
+/*This method returns the index of the last occurrence of the character in the character sequence 
+represented by this object that is less than or equal to fromIndex, or -1 if the character does not occur before that point.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+      System.out.print("Found Last Index :" );
+      System.out.println(Str.lastIndexOf( 'o' ));
+/*This method returns the index of the last occurrence of the character
+ in the character sequence represented by this object that is less than or equal to fromIndex, or -1 if the character does not occur before that point.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+      System.out.print("Found Last Index :" );
+      System.out.println(Str.lastIndexOf( 'o', 5 ));
+/*This method accepts a String as an argument, if the string argument occurs one or more times as a substring within this object, 
+then it returns the index of the first character of the last such substring is returned. If it does not occur as a substring, -1 is returned.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+       SubStr1 = new String("Tutorials" );
+      System.out.print("Found Last Index :" );
+      System.out.println( Str.lastIndexOf( SubStr1 ));
+/*This method returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index.*/
+Str = new String("Welcome to Tutorialspoint.com");
+       SubStr1 = new String("Tutorials" );
+      System.out.print("Found Last Index :" );
+      System.out.println( Str.lastIndexOf( SubStr1, 15 ));
+/*This method returns the length of this string. The length is equal to the number of 16-bit Unicode characters in the string.*/
+ String Str15 = new String("Welcome to Tutorialspoint.com");
+       String Str25 = new String("Tutorials" );
+
+      System.out.print("String Length :" );
+      System.out.println(Str15.length());
+
+      System.out.print("String Length :" );
+      System.out.println(Str25.length());
+/*This method tells whether or not this string matches the given regular expression.
+ An invocation of this method of the form str.matches(regex) yields exactly the same result as the expression Pattern.matches(regex, str).*/
+  Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("(.*)Tutorials(.*)"));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("Tutorials"));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.matches("Welcome(.*)"));
+/*This method has two variants which can be used to test if two string regions are equal.*/
+ String Str13 = new String("Welcome to Tutorialspoint.com");
+       String Str23 = new String("TUTORIALS");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str13.regionMatches(true, 11, Str2, 0, 9));
+/*This method has two variants which can be used to test if two string regions are equal.*/
+ String Str19 = new String("Welcome to Tutorialspoint.com");
+       String Str29 = new String("Tutorials");
+       String Str39 = new String("TUTORIALS");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str19.regionMatches(11, Str29, 0, 9));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str19.regionMatches(11, Str39, 0, 9));
+/*This method returns a new string resulting from replacing all occurrences of oldChar in this string with newChar.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('o', 'T'));
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replace('l', 'D'));
+/*This method replaces each substring of this string that matches the given regular expression with the given replacement.*/
+Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.replaceAll("(.*)Tutorials(.*)", "AMROOD"));
+/*This method has two variants and splits this string around matches of the given regular expression.*/
+ Str = new String("Welcome-to-Tutorialspoint.com");
+System.out.println("Return Value :" );      
+for (String retval: Str.split("-")) {
+         System.out.println(retval);
+        }
+/*This method has two variants and splits this string around matches of the given regular expression.*/
+ Str = new String("Welcome-to-Tutorialspoint.com");
+      System.out.println("Return Value :" );
+      
+      for (String retval: Str.split("-", 2)) {
+         System.out.println(retval);
+      }
+      System.out.println("");
+      System.out.println("Return Value :" );
+      
+      for (String retval: Str.split("-", 3)) {
+         System.out.println(retval);
+      }
+      System.out.println("");
+      System.out.println("Return Value :" );
+      
+      for (String retval: Str.split("-", 0)) {
+         System.out.println(retval);
+      }
+      System.out.println("");
+/*This method has two variants and tests if a string starts with the specified prefix beginning a specified index or by default at the beginning.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.startsWith("Welcome") );
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.startsWith("Tutorials") );
+/*This method has two variants and tests if a string starts with the specified prefix beginning a specified index or by default at the beginning.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.startsWith("Tutorials", 11) );
+/*This method returns a new character sequence that is a subsequence of this sequence.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.subSequence(0, 10) );
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.subSequence(10, 15) );
+/*This method has two variants and returns a new string that is a substring of this string.
+The substring begins with the character at the specified index and extends to the end of this string or up to endIndex – 1, if the second argument is given.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+      System.out.print("Return Value :" );
+      System.out.println(Str.substring(10) );
+/*This method has two variants and returns a new string that is a substring of this string. The 
+ substring begins with the character at the specified index and extends to the end of this string or up to endIndex – 1, if the second argument is given.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.substring(10, 15) );
+/*This method converts this string to a new character array.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.toCharArray() );
+/*This method has two variants. The first variant converts all of the characters in this
+ String to lower case using the rules of the given Locale. This is equivalent to calling toLowerCase(Locale.getDefault()).*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :");
+      System.out.println(Str.toLowerCase());
+/*This method returns itself a string.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :");
+      System.out.println(Str.toString());
+/*This method has two variants. The first variant converts all of the characters in 
+this String to upper case using the rules of the given Locale. This is equivalent to calling toUpperCase(Locale.getDefault()).*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.toUpperCase() );
+/*This method has two variants. The first variant converts all of the characters in this String to upper case using the rules of the given Locale. This is equivalent to calling toUpperCase(Locale.getDefault()).
+
+The second variant takes locale as an argument to be used while converting into upper case.*/
+ Str = new String("Welcome to Tutorialspoint.com");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.toUpperCase() );
+/*This method returns a copy of the string, with leading and trailing whitespace omitted.*/
+ Str = new String("   Welcome to Tutorialspoint.com   ");
+
+      System.out.print("Return Value :" );
+      System.out.println(Str.trim() );
+/*This method has the following variants, which depend on the passed parameters. This method returns the string representation of the passed argument.
+
+valueOf(boolean b) − Returns the string representation of the boolean argument.
+
+valueOf(char c) − Returns the string representation of the char argument.
+
+valueOf(char[] data) − Returns the string representation of the char array argument.
+
+valueOf(char[] data, int offset, int count) − Returns the string representation of a specific subarray of the char array argument.
+
+valueOf(double d) − Returns the string representation of the double argument.
+
+valueOf(float f) − Returns the string representation of the float argument.
+
+valueOf(int i) − Returns the string representation of the int argument.
+
+valueOf(long l) − Returns the string representation of the long argument.
+
+valueOf(Object obj) − Returns the string representation of the Object argument.*/
+double d = 102939939.939;
+      boolean b = true;
+      long l = 1232874;
+      char[] arr = {'a', 'b', 'c', 'd', 'e', 'f','g' };
+
+      System.out.println("Return Value : " + String.valueOf(d) );
+      System.out.println("Return Value : " + String.valueOf(b) );
+      System.out.println("Return Value : " + String.valueOf(l) );
+      System.out.println("Return Value : " + String.valueOf(arr) );
+    }
+}
