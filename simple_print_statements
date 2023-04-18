@@ -1,0 +1,13 @@
+//how print statements work in  a java program 
+public class Helloworld (
+public static void main(String[] args) {
+int myNum-5:
+float myfloatNum-5.99f
+boolean myBool-true;
+String mytest "hello";
+char ayletter 'd';
+System.out.println(myfloatNum);
+System.out.println(myNm):
+System.out.println(mytest);
+ System.out.println(myBool);
+System.out.println(myletter):
