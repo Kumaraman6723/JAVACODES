@@ -1,0 +1,37 @@
+//PROGRAM ON GARBAGE COLLECTION
+class employee {
+
+    public static void main(String[] args) {
+        // Create an object
+        employee obj = new employee();
+
+        // Print the hash code before unreference
+        System.out.println("Hash code before unreference: " + obj.hashCode());
+
+        // Nullify the reference
+        obj = null;
+
+        // Print a message to indicate that the reference has been nullified
+        System.out.println("Reference has been nullified.");
+        /*System.out.println("Hash code before unreference: " + obj.hashCode());
+        Exception in thread "main" java.lang.NullPointerException: Cannot invoke "Object.hashCode()" because "obj" is null
+        it is not pointing an object so it will not give his hashcode
+         */
+
+        // Create another object
+        employee obj2 = new employee();
+
+        // Assign the reference to another object
+        obj = obj2;
+
+        // Print the hash code after assigning the reference to another object
+        System.out.println("Hash code after assigning the reference to another object: " + obj.hashCode());
+
+        // Create an anonymous object
+        obj = new employee();
+
+        // Print the hash code after creating an anonymous object
+        System.out.println("Hash code after creating an anonymous object: " + obj.hashCode());
+    }
+}
+
