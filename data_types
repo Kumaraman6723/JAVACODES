@@ -1,0 +1,14 @@
+//differenet types of data types in java 
+public class HelloWorld {
+public static void main(String[] args) { 3 System.out.println(" Number DATATYPE");
+byte myNum1 100;
+System.out.println("byte "myNum1);
+short myNum2 = 5000;
+System.out.println("short myNum2); int myNum3 100000;
+System.out.println("int "+myNum3);
+long myNum4 - 15000000000L;
+System.out.println("long "-myNum4):
+float myNum5-5.75f;
+System.out.println("float"+myNum5);
+double myNum6- 19.99d;
+System.out.println("double"+myNum6);
