@@ -1,0 +1,36 @@
+//program in java to check if a class can extends another class and/ can implement one and more than one interface
+interface interference1{
+    public void speed();
+}
+interface interference2{
+    public void Car_name();
+}
+class Creta {
+    public void speed(){
+        System.out.println("Speed is " + 150 + "Km/H");
+    }
+    public void Car_name(){
+        System.out.println("Creta");
+    }
+}
+class verna extends Creta  implements interference1,interference2{
+    public void speed(){
+        System.out.println("Speed is " + 160 + "Km/H");
+    }
+    public void Car_name(){
+        System.out.println("verna");
+    }
+
+    }
+    class main6
+    {
+        public static void main(String[] args) {
+            Creta obj = new Creta();
+            obj.Car_name();
+            obj.speed();
+            verna ob = new verna();
+            ob.Car_name();
+            ob.speed();
+        }
+    }
+
