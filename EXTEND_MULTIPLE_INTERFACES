@@ -1,0 +1,31 @@
+//to check if an interface can also extend multiple interfaces.
+interface Printable1{
+    void print();
+}
+interface Showablee extends Printable1{
+    void show();
+}
+interface aman extends Showablee{
+    void write();
+}
+public class TestInterface4 implements aman {
+    @Override
+    public void print() {
+        System.out.println("hello");
+    }
+
+    @Override
+    public void show() {
+        System.out.println("welcome");
+    }
+    public void write()
+    {
+        System.out.println("aman");
+    }
+    public static void main(String[] args) {
+        TestInterface4 obj = new TestInterface4();
+        obj.print();
+        obj.show();
+        obj.write();
+    }
+}
